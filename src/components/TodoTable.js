@@ -14,11 +14,17 @@ export default props => (
       <TableRow>
         <TableCell>Name</TableCell>
         <TableCell style={{ width: 20 }}>Done</TableCell>
+        <TableCell style={{ width: 20 }}>Delete</TableCell>
       </TableRow>
     </TableHead>
     <TableBody>
       {props.todos.map(todo => (
-        <TodoRow key={todo.id} todo={todo} onComplete={props.onComplete} />
+        <TodoRow
+          key={todo.id}
+          todo={todo}
+          onComplete={props.onComplete}
+          onDelete={props.onDelete}
+        />
       ))}
     </TableBody>
   </Table>
