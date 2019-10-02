@@ -18,7 +18,7 @@ export default props => (
     </TableHead>
     <TableBody>
       {props.todos.map(todo => (
-        <TodoRow todo={todo} />
+        <TodoRow key={todo.id} todo={todo} onComplete={props.onComplete} />
       ))}
     </TableBody>
   </Table>

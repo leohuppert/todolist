@@ -1,5 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
+import shortid from "shortid";
 
 export default class TodoForm extends React.Component {
   state = {
@@ -11,6 +12,7 @@ export default class TodoForm extends React.Component {
 
     if (this.state.text.length > 0) {
       this.props.onSubmit({
+        id: shortid.generate(),
         name: this.state.text,
         complete: false,
       });
