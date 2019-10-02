@@ -10,7 +10,9 @@ export default class TodoList extends React.Component {
   componentDidMount() {
     const cachedTodos = JSON.parse(localStorage.getItem("todos"));
 
-    this.setState({ todos: cachedTodos });
+    if (cachedTodos) {
+      this.setState({ todos: cachedTodos });
+    }
   }
 
   addTodo = ({ id, name, complete }) => {
