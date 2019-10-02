@@ -13,8 +13,8 @@ export default props => (
     <TableHead>
       <TableRow>
         <TableCell>Name</TableCell>
-        <TableCell style={{ width: 20 }}>Done</TableCell>
-        <TableCell style={{ width: 20 }}>Delete</TableCell>
+        <TableCell style={{ width: 20 }}></TableCell>
+        <TableCell style={{ width: 20 }}></TableCell>
       </TableRow>
     </TableHead>
     <TableBody>

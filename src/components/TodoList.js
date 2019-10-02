@@ -51,6 +51,10 @@ export default class TodoList extends React.Component {
   };
 
   render() {
+    const todosLeft = this.state.todos.reduce((acc, cur) => {
+      return cur.complete ? acc : acc + 1;
+    }, 0);
+
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
@@ -59,6 +63,7 @@ export default class TodoList extends React.Component {
           onComplete={this.completeTodo}
           onDelete={this.deleteTodo}
         />
+        <p>Todos left : {todosLeft}</p>
       </div>
     );
   }
