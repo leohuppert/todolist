@@ -27,7 +27,12 @@ export default class TodoList extends React.Component {
   };
 
   deleteTodo = id => {
-    this.setState({ todos: this.state.todos.filter(todo => todo.id !== id) });
+    this.setState(
+      { todos: this.state.todos.filter(todo => todo.id !== id) },
+      () => {
+        localStorage.setItem("todos", JSON.stringify(this.state.todos));
+      }
+    );
   };
 
   completeTodo = id => {
