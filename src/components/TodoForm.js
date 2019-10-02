@@ -34,7 +34,7 @@ export default class TodoForm extends React.Component {
         <TextField
           label="Add a todo..."
           margin="normal"
-          style={{ width: 400 }}
+          style={{ width: "100%" }}
           name="text"
           onChange={this.handleChange}
           value={this.state.text}
