@@ -9,9 +9,7 @@ function App() {
     <div>
       <Header />
       <Container maxWidth="sm">
-        <div className="container">
-          <TodoList />
-        </div>
+        <TodoList />
       </Container>
     </div>
   );
