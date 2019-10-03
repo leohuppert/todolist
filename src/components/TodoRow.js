@@ -12,11 +12,15 @@ export default ({ todo, onComplete, onDelete }) => {
     onDelete(todo.id);
   };
 
+  const completeStyle = {
+    textDecoration: "line-through",
+    color: "grey",
+    transition: "text-decoration 2s",
+  };
+
   return (
     <TableRow>
-      <TableCell
-        style={todo.complete ? { textDecoration: "line-through" } : {}}
-      >
+      <TableCell style={todo.complete ? completeStyle : {}}>
         {todo.name}
       </TableCell>
       <TableCell>
