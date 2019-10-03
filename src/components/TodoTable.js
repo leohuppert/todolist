@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import TodoRow from "./TodoRow";
 
-export default props => (
+export default ({ todos, onComplete, onDelete }) => (
   <Table style={{ maxWidth: 1000 }}>
     <TableHead>
       <TableRow>
@@ -18,12 +18,12 @@ export default props => (
       </TableRow>
     </TableHead>
     <TableBody>
-      {props.todos.map(todo => (
+      {todos.map(todo => (
         <TodoRow
           key={todo.id}
           todo={todo}
-          onComplete={props.onComplete}
-          onDelete={props.onDelete}
+          onComplete={onComplete}
+          onDelete={onDelete}
         />
       ))}
     </TableBody>
