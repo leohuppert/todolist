@@ -22,9 +22,9 @@ export default class TodoForm extends React.Component {
     }
   };
 
-  handleChange = event => {
+  handleChange = ({ target: { value, name } }) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
   };
 
